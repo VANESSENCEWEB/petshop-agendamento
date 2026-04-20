@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetSchedule | Premium Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="bi bi-paw-fill"></i>
+                <h1>PetSchedule</h1>
+            </div>
+            <form id="appointment-form">
+                <h2>Novo Agendamento</h2>
+                <div class="input-group">
+                    <label for="pet">Nome do Pet</label>
+                    <input type="text" id="pet" placeholder="Ex: Thor" required>
+                </div>
+                <div class="input-group">
+                    <label for="tutor">Tutor</label>
+                    <input type="text" id="tutor" placeholder="Nome do dono" required>
+                </div>
+                <div class="input-group">
+                    <label for="time">Horário</label>
+                    <input type="time" id="time" required>
+                </div>
+                <div class="input-group">
+                    <label for="service">Serviço</label>
+                    <select id="service" required>
+                        <option value="">Selecione...</option>
+                        <option value="Banho e Tosa">Banho e Tosa</option>
+                        <option value="Consulta">Consulta Vet</option>
+                        <option value="Hospedagem">Hospedagem</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-add">Agendar <i class="bi bi-plus-lg"></i></button>
+            </form>
+        </aside>
+
+        <main class="content">
+            <header class="main-header">
+                <h2>Minha Agenda</h2>
+                <span id="current-date">--</span>
+            </header>
+            
+            <div id="appointments-list" class="appointments-grid">
+                </div>
+
+            <div id="empty-state" class="hidden">
+                <div class="empty-content">
+                    <i class="bi bi-calendar-x"></i>
+                    <p>Nenhum agendamento para hoje.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
